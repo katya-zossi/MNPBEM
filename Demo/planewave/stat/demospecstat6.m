@@ -37,7 +37,7 @@ sig = bem \ exc( p, enei );
 %  electric field
 f = field( bem, sig );
 %  plot norm of induced electric field
-plot( p, vecnorm( f.e ) );  
+plot( p, vecnorm( f.e, 2, 2 ) );  
 %  add colorbar
 colorbar;
 
@@ -64,4 +64,4 @@ g = greenfunction( pt, p, op );
 %  induced electric field at plate vertices
 fplate = field( g, sig );
 %  plot norm of electric field
-plot( eplate, vecnorm( fplate.e ) );
+plot( eplate, vecnorm( fplate.e, 2, 2 ) );
